@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mainForecast"
+            type="String" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_view_item_forecast"
+        android:layout_marginBottom="@dimen/page_margin_all"
+        android:foreground="?attr/selectableItemBackground">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/page_margin_all">
+
+            <ImageView
+                android:id="@+id/image_view_left_card"
+                android:layout_width="@dimen/card_view_image_size"
+                android:layout_height="@dimen/card_view_image_size"
+                android:scaleType="center"
+                android:tint="@color/colorPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent="0.25" />
+
+            <TextView
+                android:id="@+id/text_view_main_forecast"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@{mainForecast}"
+                android:textSize="@dimen/font18"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/image_view_right_card"
+                app:layout_constraintStart_toEndOf="@id/image_view_left_card"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/image_view_right_card"
+                android:layout_width="@dimen/card_view_image_size"
+                android:layout_height="@dimen/card_view_image_size"
+                android:scaleType="center"
+                android:tint="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintWidth_percent="0.25" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

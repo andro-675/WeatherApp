@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.catalogFragment.CatalogFragment"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:padding="@dimen/page_margin_all"
+        android:weightSum="100">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_daily_forecast"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="50"
+            android:elevation="@dimen/cardview_default_elevation"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="@dimen/cardview_default_radius"
+            tools:ignore="NestedWeights,PrivateResource">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="40"
+                    android:contentDescription="@string/category_image"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_calendar"
+                    android:tint="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="60"
+                    android:gravity="center"
+                    android:text="@string/daily_forecast"
+                    android:textSize="@dimen/font18" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/page_margin_all" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_hourly_forecast"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="50"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="@dimen/cardview_default_radius"
+            app:cardElevation="@dimen/cardview_default_elevation"
+            tools:ignore="NestedWeights,PrivateResource">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="40"
+                    android:contentDescription="@string/category_image"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_hourly"
+                    android:tint="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="60"
+                    android:gravity="center"
+                    android:text="@string/hourly_forecast"
+                    android:textSize="@dimen/font18" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</LinearLayout>

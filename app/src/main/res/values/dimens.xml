@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="page_margin_all">15dp</dimen>
+    <dimen name="font18">18sp</dimen>
+    <dimen name="card_view_image_size">50dp</dimen>
+    <dimen name="card_view_forecast_height">50dp</dimen>
+    <dimen name="card_view_item_forecast">80dp</dimen>
+</resources>
